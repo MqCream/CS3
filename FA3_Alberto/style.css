@@ -1,0 +1,40 @@
+body{
+    background-image: url('https://1.bp.blogspot.com/-sTxAHAxirGM/WVbAe2098nI/AAAAAAABENs/_I5sYMYgLOUzaIE7FfF4qdGX-hoAkq9SgCLcBGAs/s1600/Blog_20170624_113552.jpg');
+    background-repeat: no-repeat;
+    background-position:center ;
+}
+
+h1{
+    background-color: #32D28F;
+    width: 250px;
+    box-sizing: border-box;
+    text-align:center; 
+    border-width:2px; 
+    border-style: dotted; 
+    border-color: blue; 
+    font-family: monospace;
+    padding-top: 10px;
+    padding-bottom 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+
+p{
+    text-align:justify;
+    background-color:hsla(31, 89%, 69%, 1);
+    font-style: italic;
+    padding: 20px;
+    border-width: 3px;
+    border-color: black;
+    border-style: dotted;
+    width: 500px
+    box-sizing: content-box;
+}
+
+span{
+    font-style: bold, italic;
+    color: rgb(255,85,51);
+    margin-left: 2px;
+    margin-right: 5px;
+}

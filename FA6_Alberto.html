@@ -1,0 +1,72 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <title>FA6_Alberto</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="FA6_Alberto">
+        <meta name="keywords" content="HTML, CSS">
+        <meta name="author" content="Monique Alberto">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            a{
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin:10px;
+                margin-left: 2px;
+            }
+
+            #button1:link {
+                background-color: #071596;
+            }
+
+            #button1:hover{
+                background-color:  #dd5050;
+                color: black;
+            }
+
+            #button2:link {
+                background-color: #63cff3;
+            } 
+
+            #button2:hover{
+                background-color: #dd5050;
+                color: black;
+            }
+            
+            div{
+                border: black;
+                border-style: solid;
+                border-width: .5px;
+                padding: 69px;
+                width: 100px;
+            }
+            #div1:target{
+                background-color: #071596;
+                color: #f5e343;
+            }
+
+            #div2:target{
+                background-color: #63cff3;
+                color: #f5e343;
+                border-style: dotted;
+                border-width: 10px;
+                border-color: green;
+            }
+
+        </style>
+    </head>
+    <body>
+        <a href="#div1" id="button1">First Link</ad>
+        <a href="#div2" id="button2">Second Link</a>
+        <br>
+        <br>
+        <div id="div1"> Div 1 Here</div>
+        <br>
+        <div id="div2"> Div 2 Here</div>
+    </body>
+</html>

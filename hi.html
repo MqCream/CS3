@@ -1,13 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html>
 <body>
-	<script>
-	var age=15;
-	var MaxAge=100;
-	var numPerDay=3;
-	var totalRequired= (numPerDay *365) * (MaxAge - age);
+<style>
+*{
+text-align:center;
+}
 
-	document.write("You will need " + totalRequired + " to last you until the ripe old age of " + MaxAge);
-	</script>
+</style>
+    <button id="flp" type="button">Flip the coin</button>
+    <div id="rslt"></div>
+    <script>
+        let button = document.getElementById("flp");
+        let result = document.getElementById("rslt");
+        function fpClick(event) {
+            let num = Math.random();
+            if (num < 0.5) {
+                result.innerHTML = "You got Head";
+            } else {
+                result.innerHTML = "You got Tail";
+            }
+        }
+        button.addEventListener("click", fpClick);
+    </script>
 </body>
 </html>
+

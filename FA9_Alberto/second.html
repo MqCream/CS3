@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	<html>	
+        <head>
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		    <button onclick="revertImg()">Revert Image</button>
+		    <button onclick="replaceImg()">Replace Image</button>
+        </head>
+	    <body>
+			<img id="popCat" src="closedpopCat.jpg" width="850px" height="700px">
+		</article>
+		<script>
+			function revertImg(){
+			document.getElementById("popCat").src = "closedpopCat.jpg";
+			}
+			function replaceImg(){
+			document.getElementById("popCat").src = "openpopCat.jpg";
+			}
+		</script>
+        </body>
+	</html>

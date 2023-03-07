@@ -2,13 +2,12 @@
 <html>
 <body>
 <script>
-const randomNumber = Math.floor(Math.random() * 1000);
+let randomNumber = Math.floor(Math.random() * 1001);
 
-console.log(`Randomly generated number: ${randomNumber}`);
-
-const ones = randomNumber % 10;
-const tens = Math.floor((randomNumber % 100) / 10);
-const hundreds = Math.floor(randomNumber / 100);
+console.log("Randomly generated number: ${randomNumber}");
+let ones = randomNumber % 10;
+let tens = Math.floor((randomNumber % 100) / 10);
+let hundreds = Math.floor(randomNumber / 100); 
 
 console.log(`Breakdown: ${hundreds}, ${tens}, ${ones}`);
 </script>

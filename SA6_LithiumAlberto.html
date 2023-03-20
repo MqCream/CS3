@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+		<!-- provide the necessary meta tags -->
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {
+        		background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {
+            	padding: 10px; 
+            	background:violet 
+            }
+            a {
+            	font-size: 0.5em; 
+            	color: maroon
+            }
+        </style>
+        <script>
+        	// function to generate OTP
+        	function generateOTP() {
+        		// generate random 6 digit OTP
+        		var otp = Math.floor(100000 + Math.random() * 900000);
+        		// display OTP on screen
+        		document.getElementById("otp").innerHTML = otp;
+        	}
+
+        	// function to handle New OTP link click event
+        	function newOTP() {
+        		// generate new OTP
+        		generateOTP();
+        	}
+
+        	// function to handle Enter OTP button click event
+        	function enterOTP() {
+        		// ask user to enter OTP
+        		var enteredOTP = prompt("Please enter the OTP shown on the screen:");
+        		// check if entered OTP is correct
+        		if (enteredOTP != document.getElementById("otp").innerHTML) {
+        			// display error message
+        			alert("Incorrect OTP entered. Please try again.");
+        			// generate new OTP
+        			generateOTP();
+        		} else {
+        			// open a new window with a site of your choice
+        			window.open("https://www.google.com/");
+        		}
+        	}
+        </script>
+
+	</head>
+<body onload="generateOTP()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="#" onclick="newOTP()"> New OTP </a></h2>
+    <button onclick="enterOTP()"> Enter the OTP as shown above </button>
+    
+</body>
+</html>

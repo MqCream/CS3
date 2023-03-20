@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick="enterName()"> Click here to enter your name </button>
+    <script>
+	/* 
+    	Function to handle the click event of the button.
+        Prompts user to enter name, displays it on the page,
+        and calculates and displays the fortune.
+    */
+    function enterName() {
+        // prompt user to enter name
+        var name = prompt("Enter your full name:");
+        
+        // display entered name on page
+        document.getElementById("thename").innerHTML = name;
+        
+        // calculate numerology number
+        var num = name.length;
+        while (num > 9) {
+            num = Math.floor(num / 10) + (num % 10);
+        }
+        
+        // display fortune based on numerology number
+        switch (num) {
+            case 0:
+                document.getElementById("fortune").innerHTML = "You will find great success in your career today.";
+                break;
+            case 1:
+                document.getElementById("fortune").innerHTML = "Today is a good day for new beginnings.";
+                break;
+            case 2:
+                document.getElementById("fortune").innerHTML = "You will have a great time with friends today.";
+                break;
+            case 3:
+                document.getElementById("fortune").innerHTML = "Today is a good day to express yourself creatively.";
+                break;
+            case 4:
+                document.getElementById("fortune").innerHTML = "You may face some obstacles today, but you will overcome them.";
+                break;
+            case 5:
+                document.getElementById("fortune").innerHTML = "You will have a lucky break today.";
+                break;
+            case 6:
+                document.getElementById("fortune").innerHTML = "Today is a good day for family time.";
+                break;
+            case 7:
+                document.getElementById("fortune").innerHTML = "You will have a peaceful and calm day today.";
+                break;
+            case 8:
+                document.getElementById("fortune").innerHTML = "You will receive some good news today.";
+                break;
+            case 9:
+                document.getElementById("fortune").innerHTML = "You will meet someone special today.";
+                break;
+        }
+    }
+    </script> 
+</body>
+</html>

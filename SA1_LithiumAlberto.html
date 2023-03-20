@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Toss coin</title>
+		<!-- provide the necessary meta tags -->
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {
+                background: navy; 
+            	text-align: center;
+            	font-family: arial;
+                color: white;
+            }
+            button {
+                padding: 10px; 
+                background:violet 
+            }
+            span {
+                color: yellow;
+            }
+            #coin, h5 {
+                color: yellow; 
+            }
+            #coin { 
+                background: gray; 
+            	width: 25px; 
+                height: 25px;
+                padding: 25px;          
+                border: 5px dashed darkgray;
+                border-radius: 50%;
+                margin: 0 auto;
+                
+            }
+            
+        </style>
+
+	</head>
+	<body onload="getGuess()">
+        <h1> Heads or Tail? </h1>
+        <h2 onclick="yesFace()"> Click here to change the coin's face: <span id="face">H</span></h2>
+        <h2> Your Guess: <span id="guess"></span></h2>   
+        <h5> Click on the coin above to randomly change its face and compare with your guess </h5> 
+        <script>
+            var getGuess = function() {
+                uGuess = prompt("Type H for head and T for tail","H");
+                uGuess.toUpperCase(); // converting to an uppercase letter
+                (uGuess != "H" && uGuess != "T") ? alert("Wrong Input") :
+                    guess.innerHTML = uGuess;
+            }
+            
+            var yesFace = function() {
+                var face = document.getElementById("face");
+                var guess = document.getElementById("guess");
+                var currentFace = face.innerHTML;
+                var newFace = currentFace;
+                while (newFace == currentFace) {
+                    var randomNum = Math.floor(Math.random() * 2);
+                    newFace = (randomNum == 0) ? "H" : "T";
+                }
+                face.innerHTML = newFace;
+                if (newFace == guess.innerHTML) {
+                    alert("Your guess is correct!");
+                } else {
+                    alert("Your guess is incorrect.");
+                }
+            }
+
+        </script>
+	</body>
+</html>

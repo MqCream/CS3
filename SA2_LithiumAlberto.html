@@ -37,6 +37,7 @@
         </style>
     </head>
     <body>
+            <!-- Create a container div for the pokemon images -->
             <div>
             <h2> Choose your Pokemon </h2>
             <img id="avatar" src="https://img.pokemondb.net/sprites/ultra-sun-ultra-moon/normal/pikachu-f.png" 
@@ -51,6 +52,7 @@
                         title="Wigglytuff" onclick="cPix(this)" />
         </div>
             <script>
+                <!-- add JavaScript for changing the selected pokemon -->
                 function cPix(img) {
                     // update the avatar image source and title
                     document.getElementById("avatar").src = img.src;

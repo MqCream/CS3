@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<style>
+    table {
+        border: 1px solid black;
+        margin-top: 20px;
+}
+    td {
+        border: 1px solid black;
+}
+</style>
+<body>
+	<label for="col"> [ Enter a Number between 2 and 10 ] </label>
+	<br>
+	<input type="number" id="row" min="2" max="10">
+	<label for="col"> by </label>
+	<input type="number" id="col" min="2" max="10">
+	<br>
+	<br>
+	<button onclick="makeTable()"> Click here when ready! </button>
+	<div id="table"></div>
+<script>
+    function makeTable() {
+			// Obtain the user input values
+			var row = parseInt(document.getElementById("row").value);
+			var col = parseInt(document.getElementById("col").value);
+			
+			// Check if the values are within range
+			if (row < 2 || row > 10 || col < 2 || col > 10) {
+				alert("Exceeded the expected range of numbers. Please try again with numbers ranging from 2-10.");
+				return;
+			}
+			
+			// Generate multiplication table
+			var table = "<table>";
+			for (var i = 1; i <= row; i++) {
+				table += "<tr>";
+				for (var j = 1; j <= col; j++) {
+					table += "<td>" + (i*j) + "</td>";
+				}
+				table += "</tr>";
+			}
+			table += "</table>";
+			
+			// Display the multiplication table
+			document.getElementById("table").innerHTML = table;
+		}
+</script>		
+</body>
+</html>

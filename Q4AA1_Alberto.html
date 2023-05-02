@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Alternative Assessment 1: Genetic Coding</title>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            // Ask the user to enter the mRNA sequence
+            let mRNA = prompt("Enter the mRNA sequence:");
+
+            // Define the start codon and stop codon
+            const startCodon = "AUG";
+            const stopCodons = ["UAA", "UAG", "UGA"];
+
+            // Locate the start codon and establish the reading frame of mRNA
+            let startIndex = mRNA.indexOf(startCodon);
+            let readingFrame = mRNA.slice(startIndex);
+
+            // Divide the succeeding sequence
+            let codons = [];
+            for (let i = 0; i < readingFrame.length; i += 3) {
+                let codon = readingFrame.slice(i, i + 3);
+                codons.push(codon);
+  
+            // Stop when a stop codon is met
+            if (stopCodons.includes(codon)) {
+            break;
+  }
+}
+
+            // Recognize the amino acid for the specific codon
+            let aminoAcids = [];
+                for (let codon of codons) {
+                switch (codon) {
+                    case "AUG":
+                        aminoAcids.push("Met");
+                        break;
+                    case "UUU":
+                    case "UUC":
+                        aminoAcids.push("Phe");
+                        break;
+                    case "UUA":
+                    case "UUG":
+                    case "CUU":
+                    case "CUC":
+                    case "CUA":
+                    case "CUG":
+                        aminoAcids.push("Leu");
+                        break;
+                    case "AUU":
+                    case "AUC":
+                    case "AUA":
+                        aminoAcids.push("Ile");
+                        break;
+                    case "GUU":
+                    case "GUC":
+                    case "GUA":
+                    case "GUG":
+                        aminoAcids.push("Val");
+                        break;
+                    case "UCU":
+                    case "UCC":
+                    case "UCA":
+                    case "UCG":
+                    case "AGU":
+                    case "AGC":
+                        aminoAcids.push("Ser");
+                        break;
+                    case "CCU":
+                    case "CCC":
+                    case "CCA":
+                    case "CCG":
+                        aminoAcids.push("Pro");
+                        break;
+                    case "ACU":
+                    case "ACC":
+                    case "ACA":
+                    case "ACG":
+                        aminoAcids.push("Thr");
+                        break;
+                    case "GCU":
+                    case "GCC":
+                    case "GCA":
+                    case "GCG":
+                        aminoAcids.push("Ala");
+                        break;
+                    case "UAU":
+                    case "UAC":
+                        aminoAcids.push("Tyr");
+                        break;
+                    case "CAU":
+                    case "CAC":
+                        aminoAcids.push("His");
+                        break;
+                    case "CAA":
+                    case "CAG":
+                        aminoAcids.push("Gln");
+                        break;
+                    case "AAU":
+                    case "AAC":
+                        aminoAcids.push("Asn");
+                        break;
+                    case "AAA":
+                    case "AAG":
+                        aminoAcids.push("Lys");
+                        break;
+                    case "GAU":
+                    case "GAC":
+                        aminoAcids.push("Asp");
+                        break;
+                    case "GAA":
+                    case "GAG":
+                        aminoAcids.push("Glu");
+                        break;
+                    case "UGU":
+                    case "UGC":
+                        aminoAcids.push("Cys");
+                        break;
+                    case "UGG":
+                        aminoAcids.push("Trp");
+                        break;
+                    case "CGU":
+                    case "CGC":
+                    case "CGA":
+                    case "CGG":
+                        aminoAcids.push("Arg");
+                        break;
+                    case "AGA":
+                    case "AGG":
+                        aminoAcids.push("Arg");
+                        break;
+                    case "GGU":
+                    case "GGC":
+                    case "GGA":
+                    case "GGG":
+                        aminoAcids.push("Gly");
+                        break;
+                    case "UAA":
+                    case "UAG":
+                    case "UGA":
+                        aminoAcids.push("STOP");
+                        break;
+  }
+}
+
+            // Display the codons and their corresponding amino acids
+            document.write("<p>[" + codons.join(", ") + "]</p>");
+            for (let i = 0; i < codons.length; i++) {
+                document.write("<p>" + codons[i] + " --> " + aminoAcids[i] + "</p>");
+}
+        </script>
+    </body>
+</html>

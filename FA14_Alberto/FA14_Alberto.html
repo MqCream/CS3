@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+	<link rel="stylesheet" href="FA14style.css">
+	<script src="FA14script.js"></script>
+</head>
+<body>
+	<form id="signup-form" onsubmit="submitForm(event)">
+		<fieldset>
+			<legend>Sign-up</legend>
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name" onfocus="onFocusInput(this)" onblur="onBlurInput(this)">
+			<label for="username">Username</label>
+			<input type="text" id="username" name="username" onfocus="onFocusInput(this)" onblur="onBlurInput(this)">
+			<label for="gender">Gender</label>
+			<select id="gender" name="gender" onfocus="onFocusInput(this)" onblur="onBlurInput(this)">
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Prefer not to mention</option>
+			</select>
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" onfocus="onFocusInput(this)" onblur="onBlurInput(this)">
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" onfocus="onFocusInput(this)" onblur="onBlurInput(this)">
+			<label for="address">Address</label>
+			<input type="text" id="address" name="address" onfocus="onFocusInput(this)" onblur="onBlurInput(this)">
+			<label for="interest">Interest</label>
+			<textarea id="interest" name="interest" onfocus="onFocusInput(this)" onblur="onBlurInput(this)"></textarea>
+			<button type="submit">Submit</button>
+			<button type="reset">Reset</button>
+		</fieldset>
+	</form>
+	<div id="output"></div>
+</body>
+</html>
+
+    
+
